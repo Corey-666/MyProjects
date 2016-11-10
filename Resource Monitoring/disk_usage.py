@@ -8,7 +8,7 @@ from datetime import datetime
 df = Popen(["df -ah"], executable='/bin/bash', shell=True, stdout= open('/home/corey/disk_usage.log', 'a'))
 
 with open('/home/corey/disk_usage.log', 'a') as f:
-    f.write('\n' + str(datetime.now()) + '\n' + '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~' + '\n')
+    f.write('\n' + str(datetime.now()) + '\n' + '~'*100 + '\n')
     f.close()
     
 
