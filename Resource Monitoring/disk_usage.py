@@ -5,12 +5,13 @@ import subprocess
 from subprocess import Popen, PIPE
 from datetime import datetime
 
-df = Popen(["df -ah"], executable='/bin/bash', shell=True, stdout= open('/home/corey/disk_usage.log', 'a'))
+df = Popen(["df -ah"], executable='/bin/bash', shell=True, stdout=open('/home/corey/disk_usage.log', 'a'))
 
 with open('/home/corey/disk_usage.log', 'a') as f:
-    f.write('\n' + str(datetime.now()) + '\n' + '~'*100 + '\n')
+    f.write('\n' + datetime.strftime(datetime.now(), "%Y.%m.%d %H:%M:%S") + '\n' + '~'*100 + '\n')
     f.close()
-    
+
+
 
 
 '''
@@ -24,7 +25,6 @@ for line in out:
     out.split()
     print(out)
 '''
-
 
 '''
 def ping1(ipaddress="192.168.1.14"):
