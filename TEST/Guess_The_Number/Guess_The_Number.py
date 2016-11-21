@@ -1,8 +1,10 @@
-#! /usr/bin/python3.4
+#! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
 import random
 from datetime import datetime
+
+import unittest
 
 
 def Timer(Guess_num):
@@ -40,3 +42,23 @@ def Guess_num():
 
 if __name__ == '__main__':
         Guess_num()
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+class Test_Guess_num(unittest.TestCase):
+
+
+    def test_random(self, r):
+        r = random.randint(1, 10)
+        self.assertTrue(r in range(1,10))
+
+    def test_count(self):
+
+
+
+
+
+
+
+if __name__ == '__main__':
+    unittest.main()

@@ -1,10 +1,7 @@
-#! /usr/bin/python3.4
+#! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
-import pytest
+import unittest
+import os
 
-def func(x):
-    return x + 666
-
-def test_answer():
-    assert func(0) == 666
+print(os.getcwd())

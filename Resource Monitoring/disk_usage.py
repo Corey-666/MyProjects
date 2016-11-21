@@ -1,15 +1,22 @@
 #! /usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
+import json
 import subprocess
 from subprocess import Popen, PIPE
 from datetime import datetime
 
 df = Popen(["df -ah"], executable='/bin/bash', shell=True, stdout=open('/home/corey/disk_usage.log', 'a'))
 
-with open('/home/corey/disk_usage.log', 'a') as f:
+with open('/home/corey/disk_usage.log', 'w') as f:
     f.write('\n' + datetime.strftime(datetime.now(), "%Y.%m.%d %H:%M:%S") + '\n' + '~'*100 + '\n')
-    f.close()
+
+f = open('/home/corey/disk_usage.log')
+for line in f.readlines():
+    print line
+
+
+
 
 
 
