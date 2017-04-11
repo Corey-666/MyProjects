@@ -19,4 +19,4 @@ def func2(z = 666):
             return (z)
     print(z)
 
-print(func2())
+#print(func2())

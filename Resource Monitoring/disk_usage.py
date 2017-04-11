@@ -1,4 +1,4 @@
-#! /usr/bin/python2.7
+#! /usr/bin/python3.4
 # -*- coding: utf-8 -*-
 
 import subprocess
@@ -7,13 +7,14 @@ from datetime import datetime
 
 df = Popen(["df -ah"], executable='/bin/bash', shell=True, stdout= open('/home/corey/disk_usage.log', 'a'))
 
-with open('/home/corey/disk_usage.log', 'a') as f:
-    f.write('\n' + str(datetime.now()) + '\n' + '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~' + '\n')
-    f.close()
-    
+with open('/home/corey/disk_usage.log', 'w') as f:
+    f.write('\n' + str(datetime.now()) + '\n' + '~'*100 + '\n')
+
+
 
 
 '''
+
 # вывод на экран
 stdout=subprocess.PIPE
 
@@ -23,10 +24,12 @@ for line in out:
     out = (line.strip())
     out.split()
     print(out)
+
 '''
 
 
 '''
+
 def ping1(ipaddress="192.168.1.14"):
     p = subprocess.Popen("/bin/ping -c 2 %s" % ipaddress, shell=True,
                         stdout=subprocess.PIPE)

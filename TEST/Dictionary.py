@@ -1,3 +1,5 @@
+import os
+
 rec = {}
 
 rec['name'] = input('Enter your name ')
@@ -12,7 +14,7 @@ print(rec['name'],
       rec['age'])
 print(rec)
 
-str(rec)
-f = open('/home/corey/test_data.txt', 'w')
-f.write(rec[''])
-f.close()
+with open('/home/corey/test_data.txt', 'w') as f:
+      f.write(str(rec))
+
+

@@ -38,5 +38,5 @@ mybox = Box([], int)
 mybox.open_box()
 myhero.items = myhero.items + ", " + mybox.items
 print('Daaaamn,', name, 'You have magic item: ', mybox.items)
-print(myhero.items)
+print('And now you have 'myhero.items)
 

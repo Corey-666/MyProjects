@@ -13,10 +13,10 @@ def Timer(Guess_num):
         print('Your time is: ', t2 - t1)
     return decorator
 
+
 @Timer
 def Guess_num():
-
-    print('Test your luck, guess the number!')
+    print('Test your luck, guess the number from 1 to 10!')
 
     r = random.randint(1, 10)
     a = int(input('enter num: '))
@@ -40,3 +40,4 @@ def Guess_num():
 
 if __name__ == '__main__':
         Guess_num()
+

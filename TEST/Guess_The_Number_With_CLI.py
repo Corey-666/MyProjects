@@ -16,8 +16,8 @@ def Timer(Guess_num):
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-x', '-From', nargs='?', type=int, help='Первое число диапозона')
-parser.add_argument('-y', '-To ', nargs='?', type=int, help='Второе число диапозона')
+parser.add_argument('-x', '-From', nargs='?', type=int, help='Начальное число диапозона')
+parser.add_argument('-y', '-To ', nargs='?', type=int, help='Конечное число диапозона')
 
 args = parser.parse_args()
 print('Guess from ' + str(args.x) + ' to ' + str(args.y))
@@ -52,3 +52,4 @@ def Guess_num():
         print(r, '\nChislo popitok: ', count)
 
 Guess_num()
+
