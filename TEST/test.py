@@ -37,7 +37,7 @@ def max(x, y):
 print(max(3,2))
 '''
 
-
+'''
 import sys
 
 for i in sys.argv:
@@ -45,12 +45,15 @@ for i in sys.argv:
 print(sys.argv)
 
 '''
+'''
 elif sys.argv == '-open':
     print('OPEN BLEAT')
 
 print('\n\nPATH is ', sys.path,'\n')
 
-
 '''
 
+import os
 
+dir = '/home/$USER/Temp/dir_test'
+print(os.path.abspath(dir))
