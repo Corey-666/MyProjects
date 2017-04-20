@@ -12,7 +12,8 @@ source = [input('Enter path to directorys what you want TO BACKUP! Example: "~/D
 
 target_dir_default = os.path.expanduser('~/Backup_Test') # заменяет ~ или на домашнюю директорию пользователя!
 target_dir = ''
-target_dir = os.path.expanduser(input('If you want, you can enter your path to directory where backup be located! (Default path "~/Backup") Otherwise push Enter\n '))
+target_dir = os.path.expanduser(input('If you want, you can enter your path to directory where backup be located!'
+                                      ' (Default path "~/Backup") Otherwise push Enter\n '))
 
 if  target_dir == '':
     target_dir = target_dir_default

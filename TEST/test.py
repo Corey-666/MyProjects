@@ -57,11 +57,17 @@ print('\n\nPATH is ', sys.path,'\n')
 '''
 
 '''
+# Format method
 print(2<4<6)
 
 print('{0:o}, {1:x}, {2:b}'.format(100,100,100)) # o - восьмиричный литерал
                                                  # x - шестнадцетиричный
                                                  # b - двоичный
+
+
+print(
+'{name:>5}{job:>5}{age:<3}'.format(age=input('age: '), job=input('job: '), name=input('name'))
+     )
 
 
 print(int('01010101', 2)) # Преобразование изображения числа в число по основанию
@@ -89,11 +95,13 @@ path_right = r'c:\shit\fuck\ass'
 print(path_right)
 '''
 
-print(r'JOPA'[:-1])
+'''
+print(r'JOPA'[:-1]) # r'some_string', r значит НЕ форматированная строка
 
 minus = (len('jopa')-1) # !!! Технически отрицательное смещение складывается с длинной строки!!!
 print('jopa'[minus])    # len('jopa')-1 = 4+(-1) = 3
 print('jopa'[-1])
+'''
 
 
 

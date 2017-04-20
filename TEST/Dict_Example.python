@@ -1,0 +1,24 @@
+#! /usr/bin/python
+# -*- coding: utf-8 -*-
+__author__ = "cOREY_kILL"
+__license__ = "GPL"
+
+
+D = {'a' : 1, 'b' : 2, 'c' : 3}
+
+# Сортировка словаря по ключю!
+sort_by_key = list(D.keys())
+print(sort_by_key)
+sort_by_key.sort()
+print(sort_by_key)
+
+for key in sort_by_key:
+    print(key, '==>', D[key])
+
+for key in sorted(D):
+    print(key, '==>', D[key]) # 2й вариант сортировки
+
+#Проверка на членство в словаре
+print('f' in D) # результат проверки False или True!
+if not 'f' in D:
+    print('Missing((')
